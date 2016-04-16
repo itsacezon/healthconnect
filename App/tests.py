@@ -17,6 +17,10 @@ class BarangayModelTest(APITestCase):
 		response = self.client.get('/api/program')
 		self.assertEqual(response.status_code, status.HTTP_200_OK)
 
+		response = self.client.get('/api/program?barangay=1')
+		self.assertEqual(response.status_code, status.HTTP_200_OK)
+		print response.data
+
 	def testCreateProgram(self):
 		data = {
 			'title': 'Free Circumcision',

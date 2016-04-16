@@ -1,10 +1,19 @@
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+
 	<title>Document</title>
+
+	<link rel="stylesheet" href="{% static 'css/build.css' %}" type="text/css" />
 </head>
 <body>
-	<h1>HI</h1>
+	<!--[if lt IE 10]>
+      <h2>This app doesn't support IE versions lower than 10, go to http://browsehappy.com for supported browsers.</h2>
+    <![endif]-->
+	<div id="app"></div>
+  <script src="{% static 'js/build.js' %}"></script>
 </body>
 </html>

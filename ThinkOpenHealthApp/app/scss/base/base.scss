@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fbfbfb;
+  font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+  color: #1e2022;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+
+  font-weight: 600;
+  line-height: 1.2;
+
+  word-wrap: break-word;
+  color: #1e2022;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}

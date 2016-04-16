@@ -34,13 +34,24 @@ class ListBarangayAPIView(APIView):
 
 class ListProgramAPIView(APIView):
 	
+	queryset = HealthProgram.objects.all()
 	serializer_class = HealthProgramSerializer
 
 	def get_permission(self):
 		return[AllowAny()]
 
+	def filter_queryset(self, queryset):
+		filters = {}
+		if self.request.GET.get('barangay', None):
+
+			filters['barangay_id'] = self.request.GET.get('barangay', None)
+
+		queryset = queryset.filter(**filters)
+		return queryset
+
 	def get(self, request):
-		queryset = HealthProgram.objects.all()
+		queryset = self.queryset
+		queryset = self.filter_queryset(queryset)
 		serializer = self.serializer_class(queryset, many = True)
 		return Response(serializer.data)
 
