@@ -12,10 +12,17 @@
     "build-css": "node-sass ThinkOpenHealthApp/app/scss/build.scss static/css/build.css | uglifycss --ugly-comments static/css/build.css > static/css/build.css",
     "build": "npm-run-all --parallel build-js build-css"
   },
+  "browserify": {
+    "transform": [
+      "vueify",
+      "babelify"
+    ]
+  },
   "dependencies": {
     "relative-date": "^1.1.3",
     "vue": "^1.0.21",
-    "vue-resource": "^0.7.0"
+    "vue-resource": "^0.7.0",
+    "vue-router": "^0.7.13"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
@@ -29,6 +36,7 @@
     "http-server": "^0.9.0",
     "jade": "^1.11.0",
     "node-sass": "^3.4.2",
+    "normalize.css": "^4.1.1",
     "npm-run-all": "^1.7.0",
     "uglify-js": "^2.6.2",
     "uglifycss": "0.0.20",
@@ -36,11 +44,5 @@
     "vueify": "^8.3.9",
     "vueify-insert-css": "^1.0.0",
     "watchify": "^3.7.0"
-  },
-  "browserify": {
-    "transform": [
-      "vueify",
-      "babelify"
-    ]
   }
 }

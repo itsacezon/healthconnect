@@ -17,11 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-import App.views 
+import App.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^home/', App.views.home),
+    url(r'^$', App.views.home),
     url(r'^doctors/', include("App.urls")),
 ]
 
@@ -31,4 +31,3 @@ if settings.DEBUG:
                           document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
-
