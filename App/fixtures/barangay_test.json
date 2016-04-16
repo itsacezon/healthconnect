@@ -8,5 +8,76 @@
         "region": "NCR",
         "province": "Metro Manila"
     }
-  }
+  },
+  {
+    "model": "App.barangay",
+    "pk": 1,
+    "fields": {
+        "full_name": "Balara",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+    }
+  },
+  {
+    "model": "App.barangay",
+    "pk": 2,
+    "fields": {
+        "full_name": "Batasan Hills",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+    }
+  },
+  {
+    "model": "App.barangay",
+    "pk": 3,
+    "fields": {
+        "full_name": "Commonwealth",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+    }
+  },
+  {
+    "model": "App.barangay",
+    "pk": 4,
+    "fields": {
+        "full_name": "Amihan",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+    }
+  },
+  {
+    "model": "App.barangay",
+    "pk": 4,
+    "fields": {
+        "full_name": "Amihan",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+    }
+   },
+   {
+    "model": "App.barangay",
+    "pk": 5,
+    "fields": {
+        "full_name": "Amihan",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+     }
+    },
+    {
+    "model": "App.barangay",
+    "pk": 6,
+    "fields": {
+        "full_name": "Amihan",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+     }
+    }
+
 ]
