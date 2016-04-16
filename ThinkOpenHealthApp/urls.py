@@ -22,7 +22,7 @@ import App.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include('API.urls', namespace = "barangay")),
-    url(r'^$', App.views.home),
+    url(r'', App.views.home),
 ]
 
 

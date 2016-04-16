@@ -24,6 +24,12 @@
   vertical-align: middle;
 }
 
+.nav__logo-title {
+  display: inline-block;
+  margin: 0 0 0 6px;
+  vertical-align: middle;
+}
+
 .nav__link {
   display: inline-block;
   position: relative;
@@ -49,6 +55,7 @@
 
   &.nav--home {
     margin-right: 12px;
+    padding-left: 0;
 
     &:hover {
       background-color: transparent;

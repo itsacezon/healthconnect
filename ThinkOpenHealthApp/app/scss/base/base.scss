@@ -22,8 +22,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-
   font-weight: 600;
   line-height: 1.2;
 
@@ -33,4 +31,11 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  margin: 0 0 14px 0;
+}
+h4, h5, h6 {
+  margin: 0 0 8px 0;
 }
