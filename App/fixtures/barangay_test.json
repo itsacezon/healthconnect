@@ -1,0 +1,12 @@
+[
+  {
+    "model": "App.barangay",
+    "pk": 1,
+    "fields": {
+        "full_name": "Balara",
+        "city": "Quezon City",
+        "region": "NCR",
+        "province": "Metro Manila"
+    }
+  }
+]
