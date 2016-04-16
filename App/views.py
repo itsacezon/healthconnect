@@ -4,7 +4,7 @@ from rest_framework import generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-from rest_framework import status
+from rest_framework import status, viewsets, mixins
 from .models import User, Barangay, HealthProgram, Attendance
 
 from .serializers import (
@@ -119,6 +119,21 @@ class CreateProgramAPIView(APIView):
             return Response(serializer.data, status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+
+class RetrieveProgramAPIView(mixins.RetrieveModelMixin,
+                            viewsets.GenericViewSet):
+    permission_classes = (AllowAny,)
+    queryset = HealthProgram.objects.all()
+    serializer_class = HealthProgramSerializer
+
+    def retrieve(self, request, pk):
+
+        program = self.get_object()
+        serializer = self.serializer_class(program)
+
+        data = serializer.data
+        return Response(data)
+
 
 class CreateAttendeeAPIView(APIView):
 

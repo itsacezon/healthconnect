@@ -25,15 +25,7 @@ class BarangayModelTest(APITestCase):
 			'title': 'Free Circumcision',
 			'barangay_id': 1,
 			'tags': ['fitness','zumba', 'exercise'],
-			'sessions': [
-				{
-					'id': 1,
-					'description': 'Get fit by attending our free zumba.',
-					'address': 'Covered Court',
-					'date': '2016-03-15T07:45:06.091Z',
-					'fee': 'free'
-				}
-			]
+			'sessions': "[{\"id\": 1,\"description\": \"Get fit by attending our free zumba.\",\"address\": \"Covered Court\",\"date\": \"2016-03-15T07:45:06.091Z\",\"fee\": \"free\"}]"
 		}
 		response = self.client.post('/api/program/', data)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -46,3 +38,7 @@ class BarangayModelTest(APITestCase):
 		}
 		response = self.client.post('/api/attendee/', data)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+		response = self.client.get('/api/program/1')
+		print(response.data)
+		self.assertEqual(response.status_code, status.HTTP_200_OK)
