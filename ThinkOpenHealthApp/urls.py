@@ -21,8 +21,8 @@ import App.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', App.views.home),
     url(r'^doctors/', include("App.urls")),
+    url(r'^$', App.views.home),
 ]
 
 

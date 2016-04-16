@@ -2,3 +2,32 @@
 @import "base/base";
 
 @import "components/header";
+
+.page__wrapper {
+  &.page--light {
+    background-color: #fff;
+    border-top: 1px #eee solid;
+  }
+
+  &.page--min-height {
+    min-height: 100vh;
+  }
+}
+
+.content__wrapper {
+  margin: 0 auto;
+  max-width: $content-width;
+
+  &.content--small {
+    max-width: 440px;
+  }
+}
+
+.content__section {
+  @include clearfix();
+  padding: 36px 12px;
+
+  .content--additional-info {
+    color: #8b8687;
+  }
+}

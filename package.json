@@ -9,7 +9,7 @@
     "watch-js": "watchify -vd -p browserify-hmr -e ThinkOpenHealthApp/app/js/build.js -o static/js/build.js",
     "dev": "npm-run-all --parallel watch-css watch-js",
     "build-js": "cross-env NODE_ENV=production browserify ThinkOpenHealthApp/app/js/build.js | uglifyjs -c warnings=false -m > static/js/build.js",
-    "build-css": "node-sass ThinkOpenHealthApp/app/scss/build.scss static/css/build.css | uglifycss --ugly-comments static/css/build.css > static/css/build.css",
+    "build-css": "node-sass ThinkOpenHealthApp/app/scss/build.scss static/css/build.css --style compressed | uglifycss --ugly-comments static/css/build.css > static/css/build.css",
     "build": "npm-run-all --parallel build-js build-css"
   },
   "browserify": {

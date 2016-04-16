@@ -11,7 +11,6 @@ const router = new VueRouter({
 router.map({
   '/index': {
     name: 'home',
-    guest: true,
     component: require('./pages/index.vue')
   }
 })
