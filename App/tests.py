@@ -19,7 +19,6 @@ class BarangayModelTest(APITestCase):
 
 		response = self.client.get('/api/program?barangay=1')
 		self.assertEqual(response.status_code, status.HTTP_200_OK)
-		print response.data
 
 	def testCreateProgram(self):
 		data = {
@@ -37,4 +36,13 @@ class BarangayModelTest(APITestCase):
 			]
 		}
 		response = self.client.post('/api/program/', data)
+		self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+	def testCreateAttendee(self):
+		data = {
+			'health_program_id': 1,
+			'session_id': 1,
+			'user_id': 1
+		}
+		response = self.client.post('/api/attendee/', data)
 		self.assertEqual(response.status_code, status.HTTP_201_CREATED)

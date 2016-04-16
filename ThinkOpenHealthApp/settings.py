@@ -131,3 +131,9 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 MEDIA_URL= "/media/"
 
+
+TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID', 'PrNyQmbjS4Xyw03nxy7VpnMhDxSmdb5Kd')
+TWILIO_API_KEY = os.environ.get('TWILIO_API_KEY', ' SK693a4cb5c04d38ba11c9d9e1063693fe')
+TWILIO_API_SECRET = os.environ.get('TWILIO_API_SECRET', 'rNyQmbjS4Xyw03nxy7VpnMhDxSmdb5Kd')
+TWILIO_IPM_SERVICE_SID = os.environ.get('TWILIO_IPM_SERVICE_SID', 'SK693a4cb5c04d38ba11c9d9e1063693fe')
+

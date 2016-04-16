@@ -25,6 +25,7 @@ class HealthProgram(models.Model):
 	sessions = JSONField(default=[])
 
 class Attendance(models.Model):
+	health_program_id = models.IntegerField(blank=False)
 	session_id = models.IntegerField(blank = False)
 	user_id = models.IntegerField(blank = False)
 	remark = models.TextField(blank = True)
