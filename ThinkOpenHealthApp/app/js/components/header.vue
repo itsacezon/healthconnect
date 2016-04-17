@@ -4,7 +4,9 @@ header.header__wrapper
     .nav.nav--left
       a.nav__link.nav--home(v-link="{ name: 'home' }")
         .nav__logo
-        h3.nav__logo-title HealthConnect
+        h3.nav__logo-title
+          span HealthConnect
+          span.green .
 
     .nav.nav--right
       a.nav__link(v-link="{ name: 'home' }") Programs
