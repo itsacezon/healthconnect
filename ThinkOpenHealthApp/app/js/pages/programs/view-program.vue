@@ -25,7 +25,9 @@ section.page__wrapper
             br
             span {{ program.sessions[0].fee | capitalize }}
         .form__wrapper
-          h4 Attendees
+          .u-cf
+            h4.u-ft-left Attendees
+            a.button.button--small.button--inverted.u-ft-right(href="#0" @click.prevent="notifyAttendees") Notify attendees
           .users(v-if="program.sessions[0].attendees.length !== 0")
             .user(v-for="attendee in program.sessions[0].attendees")
               h4.u-mg-b-4 {{ users[attendee.user_id - 1].full_name }}
@@ -49,6 +51,12 @@ v-modal(:show.sync="showAttendeesModal")
             option(v-for="(index, user) in users" v-bind:value="index + 1") {{ user.full_name }} - No. {{ index + 1 }}
       .form__element
         button(type="submit") Add
+
+v-modal(:show.sync="showNotifiedAttendees")
+  div(slot="content" style="width:300px;")
+    h3.u-mg-b-14 All attendees notified!
+    p They will receive an SMS about the upcoming event.
+    a.button.button--small(href="#0" @click.prevent="showNotifiedAttendees = false") Close
 
 </template>
 
@@ -86,11 +94,18 @@ export default {
           address: "Lt. Francisco St.",
           barangay_id: 1,
           phone_number: "09123456789"
+        },
+        {
+          full_name: "Gabriel Chase Patron",
+          address: "Salvador St.",
+          barangay_id: 1,
+          phone_number: "09123456789"
         }
       ],
       attendee: attendee(),
       program: null,
-      showAttendeesModal: false
+      showAttendeesModal: false,
+      showNotifiedAttendees: false
     }
   },
   computed: {
@@ -125,6 +140,16 @@ export default {
         },
         (response) => {
           console.log('Failed to add attendee')
+        }
+      )
+    },
+    notifyAttendees () {
+      this.$http.get('send-sms').then(
+        (response) => {
+          this.showNotifiedAttendees = true
+        },
+        (response) => {
+          console.log('Failed to submit')
         }
       )
     }

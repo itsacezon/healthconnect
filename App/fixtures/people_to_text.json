@@ -28,5 +28,15 @@
         "barangay_id": 1,
         "phone_number": "09123456789"
     }
+  },
+  {
+    "model": "App.user",
+    "pk": 4,
+    "fields": {
+        "full_name": "Gabriel Chase Patron",
+        "address": "Salvador St.",
+        "barangay_id": 1,
+        "phone_number": "09123456789"
+    }
   }
 ]

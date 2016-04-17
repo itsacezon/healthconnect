@@ -1,6 +1,13 @@
 .u-cf {
   @include clearfix();
 }
+.u-ft-left {
+  float: left;
+}
+.u-ft-right {
+  float: right;
+}
+
 .u-wd-50 {
   float: left;
   width: 50%;
