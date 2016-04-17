@@ -39,6 +39,7 @@ function defaultProgram () {
     ]
   }
 }
+
 export default {
   data () {
     return {
@@ -59,6 +60,7 @@ export default {
   methods: {
     dispatchRequest () {
       this.program.barangay_id++
+      this.program.sessions = JSON.stringify(this.program.sessions)
       this.$dispatch('request', this.program)
       this.program = defaultProgram()
     }
