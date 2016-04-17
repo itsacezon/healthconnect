@@ -8,8 +8,8 @@ from rest_framework import status, viewsets, mixins
 from .models import User, Barangay, HealthProgram, Attendance
 
 from .serializers import (
-    UserSerializer, 
-    BarangaySerializer, 
+    UserSerializer,
+    BarangaySerializer,
     HealthProgramSerializer,
     AttendanceSerializer
 )
@@ -33,7 +33,7 @@ def send_sms(mobile_number, message):
     import requests as http
     msg_id = generate_msgid()
     payload = { 'message_type'  : 'SEND',
-                'mobile_number' : mobile_number, 
+                'mobile_number' : mobile_number,
                 'shortcode'     : SHORTCODE,
                 'message_id'    : msg_id,
                 'message'       : message,
@@ -51,7 +51,7 @@ def send_sms(mobile_number, message):
             pass  #TODO: Code when sending to API is ok
         elif status == "400":
             #when something is wrong with request
-            desc  = info.get("description") 
+            desc  = info.get("description")
             raise SMSSendError(stsmsg, desc)
         elif status in ("401", "403", "404"):
             #401 means your credentials (client_id, sec. key) are incorrect
@@ -66,13 +66,13 @@ def send_sms(mobile_number, message):
 
 class SendSMSAPIView(APIView):
      def get(self, request):
-        
-        send_sms('639176302364', 'I love you <3')
+
+        send_sms('639176302364', 'Brgy. Balara would like to remind you of the event.')
         return Response({}, status.HTTP_200_OK)
 
 
 class ListBarangayAPIView(APIView):
-    
+
     serializer_class = BarangaySerializer
 
     def get_permission(self):
@@ -84,7 +84,7 @@ class ListBarangayAPIView(APIView):
         return Response(serializer.data)
 
 class ListProgramAPIView(APIView):
-    
+
     queryset = HealthProgram.objects.all()
     serializer_class = HealthProgramSerializer
 
@@ -114,7 +114,7 @@ class CreateProgramAPIView(APIView):
         data = request.data
         serializer = HealthProgramSerializer(data=data)
         if serializer.is_valid():
-            
+
             report = serializer.save()
             return Response(serializer.data, status.HTTP_201_CREATED)
         else:
@@ -143,7 +143,7 @@ class CreateAttendeeAPIView(APIView):
         data = request.data
         serializer = AttendanceSerializer(data=data)
         if serializer.is_valid():
-            
+
             report = serializer.save()
             return Response(serializer.data, status.HTTP_201_CREATED)
         else:
@@ -156,4 +156,4 @@ class CreateAttendeeAPIView(APIView):
 #   """
 #   queryset = Doctor.objects.all()
 #   serializer_class = DoctorSerializer
-#     
+#

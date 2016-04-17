@@ -21,13 +21,21 @@
 }
 
 .nav__logo {
+  display: inline-block;
   vertical-align: middle;
+  background-color: $brand-color;
+  height: 40px;
+  width: 40px;
+
+  mask: url('/static/img/icons/maps/ic_local_hospital_48px.svg');
+  mask-size: cover;
 }
 
 .nav__logo-title {
   display: inline-block;
   margin: 0 0 0 6px;
   vertical-align: middle;
+  font-weight: 600;
 }
 
 .nav__link {
@@ -60,6 +68,10 @@
     &:hover {
       background-color: transparent;
     }
+  }
+
+  span, img {
+    vertical-align: middle;
   }
 }
 
