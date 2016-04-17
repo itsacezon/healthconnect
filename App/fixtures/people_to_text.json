@@ -1,6 +1,32 @@
 [
   {
-    "phone_number": "+18284790128",
-    "name": "Gabriel Patron"
+    "model": "App.user",
+    "pk": 1,
+    "fields": {
+        "full_name": "Denise Leviste",
+        "address": "Maginhawa St.",
+        "barangay_id": 1,
+        "phone_number": "09123456789"
+    }
+  },
+  {
+    "model": "App.user",
+    "pk": 2,
+    "fields": {
+        "full_name": "Mara Shen",
+        "address": "Salvador St.",
+        "barangay_id": 1,
+        "phone_number": "09123456789"
+    }
+  },
+  {
+    "model": "App.user",
+    "pk": 3,
+    "fields": {
+        "full_name": "Gerald Roy",
+        "address": "Lt. Francisco St.",
+        "barangay_id": 1,
+        "phone_number": "09123456789"
+    }
   }
 ]

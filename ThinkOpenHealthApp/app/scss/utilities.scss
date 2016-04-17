@@ -1,0 +1,79 @@
+.u-cf {
+  @include clearfix();
+}
+.u-wd-50 {
+  float: left;
+  width: 50%;
+}
+
+.u-truncate {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.u-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h1, h2 {
+    margin: 0;
+    color: white;
+    font-weight: 400;
+  }
+  h1 {
+    font-size: 44px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 36px;
+    font-weight: 400;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.75);
+  }
+}
+
+.u-div-240 {
+  height: 240px;
+  overflow: hidden;
+}
+
+.u-bg-c-brand {
+  background-color: $brand-color;
+}
+.u-bg-c-blue {
+  background-color: #30A9DE;
+}
+.u-bg-c-dgray {
+  background-color: #575450;
+}
+.u-bg-img {
+  height: 100%;
+  background-position: center center;
+}
+
+.u-br-t-4 {
+  border-radius: 4px 4px 0 0;
+}
+
+.u-mg-b-4 {
+  margin-bottom: 4px;
+}
+.u-mg-b-14 {
+  margin-bottom: 14px;
+}
+
+.u-small {
+  font-size: 0.75em;
+}
+
+.u-ta-c {
+  text-align: center;
+}
+
+.u-td-upper {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

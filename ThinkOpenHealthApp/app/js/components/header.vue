@@ -8,7 +8,7 @@ header.header__wrapper
 
     .nav.nav--right
       a.nav__link(v-link="{ name: 'home' }") Programs
-      a.nav__link(href="#0") People
+      a.nav__link(href="#0") Statistics
 
 </template>
 

@@ -11,16 +11,6 @@
   },
   {
     "model": "App.barangay",
-    "pk": 1,
-    "fields": {
-        "full_name": "Balara",
-        "city": "Quezon City",
-        "region": "NCR",
-        "province": "Metro Manila"
-    }
-  },
-  {
-    "model": "App.barangay",
     "pk": 2,
     "fields": {
         "full_name": "Batasan Hills",
@@ -53,7 +43,7 @@
     "model": "App.barangay",
     "pk": 4,
     "fields": {
-        "full_name": "Amihan",
+        "full_name": "Cubao",
         "city": "Quezon City",
         "region": "NCR",
         "province": "Metro Manila"
@@ -63,7 +53,7 @@
     "model": "App.barangay",
     "pk": 5,
     "fields": {
-        "full_name": "Amihan",
+        "full_name": "Bagong Pagasa",
         "city": "Quezon City",
         "region": "NCR",
         "province": "Metro Manila"
@@ -73,7 +63,7 @@
     "model": "App.barangay",
     "pk": 6,
     "fields": {
-        "full_name": "Amihan",
+        "full_name": "Katipunan",
         "city": "Quezon City",
         "region": "NCR",
         "province": "Metro Manila"

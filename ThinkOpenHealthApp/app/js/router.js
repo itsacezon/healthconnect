@@ -12,6 +12,10 @@ router.map({
   '/index': {
     name: 'home',
     component: require('./pages/index.vue')
+  },
+  '/program/:id': {
+    name: 'program',
+    component: require('./pages/programs/view-program.vue')
   }
 })
 

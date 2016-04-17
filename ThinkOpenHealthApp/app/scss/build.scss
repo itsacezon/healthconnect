@@ -2,6 +2,9 @@
 @import "base/base";
 
 @import "components/header";
+@import "components/users";
+
+@import "utilities";
 
 .page__wrapper {
   &.page--light {
@@ -29,5 +32,28 @@
 
   .content--additional-info {
     color: #8b8687;
+  }
+}
+
+.content__primary {
+  float: left;
+  margin-right: 3%;
+  width: 70%;
+
+  &:last-child {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.content__secondary {
+  float: left;
+  width: 27%;
+
+  & + .content__main {
+    float: left;
+    margin-right: 0;
+    margin-left: 3%;
   }
 }

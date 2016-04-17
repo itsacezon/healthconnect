@@ -2,6 +2,7 @@
 @import "mixins";
 
 @import "buttons";
+@import "cards";
 @import "forms";
 @import "modals";
 
@@ -14,28 +15,65 @@ html {
 }
 
 body {
-  background-color: #fbfbfb;
+  background-color: #F2EDE7;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
+
   font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .004);
-  color: #1e2022;
+  color: #282c37;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
-
   word-wrap: break-word;
-  color: #1e2022;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
+
+  .header--light {
+    color: lighten(#282c37, 50%);
+  }
 }
 
-h1, h2, h3 {
+h1, h2 {
   margin: 0 0 14px 0;
 }
-h4, h5, h6 {
+h3, h4, h5, h6 {
   margin: 0 0 8px 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  line-height: 1.4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.large {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &.small {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  margin: 12px 0;
+  height: 1px;
+  background-color: #eee;
+  border: none;
 }

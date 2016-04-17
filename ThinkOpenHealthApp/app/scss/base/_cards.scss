@@ -1,0 +1,68 @@
+.cards {
+  @include clearfix();
+}
+
+.card {
+  display: block;
+  margin: 0 2% 20px 0;
+  float: left;
+  width: 32%;
+  height: 310px;
+
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  background-color: white;
+
+  color: #282c37;
+  transition: 250ms;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.15);
+
+    .card__header {
+      color: $brand-color;
+    }
+  }
+
+  &.card--button {
+    $border-color: lighten(#575450, 36%);
+    transition: 250ms;
+    background-color: transparent;
+    box-shadow: none;
+    border: 2px $border-color dashed;
+  }
+  &.card--button:hover {
+    background-color: lighten(#575450, 60%);
+
+    .button {
+      pointer-events: none;
+    }
+  }
+}
+
+.card__image {
+  height: 100px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 4px 4px 0 0;
+}
+
+.card__content {
+  padding: 20px;
+  overflow: hidden;
+
+  &.card--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.card__header {
+  transition: 250ms;
+}
