@@ -28,4 +28,4 @@ This was an entry to #ThinkOpenHealth Hackathon 2016.
 3. To build, run `npm run build`
 
 ## Developers
-Django app was written by ![Andie Rabino](https://github.com/heyandie), Vue app was written by me.
+Django app was written by [Andie Rabino](https://github.com/heyandie), Vue app was written by me.
