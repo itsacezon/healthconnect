@@ -28,5 +28,5 @@ This was an entry to #ThinkOpenHealth Hackathon 2016.
 3. To build, run `npm run build`
 
 ## Developers
-- Django app was written by [Andie Rabino](https://github.com/heyandie)
+- Django app was written by [Gabriel Chase](https://github.com/gabrielchase)
 - Vue app, including the UI, was written/designed by me
